@@ -1,0 +1,74 @@
+<!-- <div *ngFor="let p of posts">
+    {{p.title}}
+</div> -->
+
+<!-- <ul>
+    <li *ngFor="let p of posts">
+        {{p.title}}
+    </li>
+</ul> -->
+
+<section class="section first-section">
+    <div class="container-fluid">
+        <div class="masonry-blog clearfix">
+            <ng-container *ngFor="let p of posts">
+
+                <div *ngIf="p.id == 1;else two" class="left-side">
+                    <div class="masonry-box post-media">
+                        <img src="assets/upload/garden_cat_01.jpg" alt="" class="img-fluid">
+                        <div class="shadoweffect">
+                            <div class="shadow-desc">
+                                <div class="blog-meta">
+                                    <span class="bg-aqua"><a href="assets/blog-category-01.html"
+                                            title="">{{p.title}}</a></span>
+                                    <h4><a href="assets/garden-single.html" title="">{{p.title}}</a></h4>
+                                    <small><a href="assets/garden-single.html" title="">{{p.date}}</a></small>
+                                    <small><a href="#" title="">by {{p.author.first_name}}</a></small>
+                                </div><!-- end meta -->
+                            </div><!-- end shadow-desc -->
+                        </div><!-- end shadow -->
+                    </div><!-- end post-media -->
+                </div><!-- end left-side -->
+                <ng-template #two>
+
+                    <div *ngIf="p.id==2;else tree" class="center-side">
+                        <div class="masonry-box post-media">
+                            <img src="assets/upload/garden_cat_01.jpg" alt="" class="img-fluid">
+                            <div class="shadoweffect">
+                                <div class="shadow-desc">
+                                    <div class="blog-meta">
+                                        <span class="bg-aqua"><a href="assets/blog-category-01.html"
+                                                title="">{{p.title}}</a></span>
+                                        <h4><a href="assets/garden-single.html" title="">{{p.title}}</a></h4>
+                                        <small><a href="assets/garden-single.html" title="">{{p.date}}</a></small>
+                                        <small><a href="#" title="">by {{p.author}}</a></small>
+                                    </div><!-- end meta -->
+                                </div><!-- end shadow-desc -->
+                            </div><!-- end shadow -->
+                        </div><!-- end post-media -->
+                    </div><!-- end left-side -->
+
+                </ng-template>
+                <ng-template #tree>
+
+                    <div class="right-side hidden-md-down">
+                        <div class="masonry-box post-media">
+                            <img src="assets/upload/garden_cat_01.jpg" alt="" class="img-fluid">
+                            <div class="shadoweffect">
+                                <div class="shadow-desc">
+                                    <div class="blog-meta">
+                                        <span class="bg-aqua"><a href="assets/blog-category-01.html"
+                                                title="">{{p.title}}</a></span>
+                                        <h4><a href="assets/garden-single.html" title="">{{p.title}}</a></h4>
+                                        <small><a href="assets/garden-single.html" title="">{{p.date}}</a></small>
+                                        <small><a href="#" title="">by {{p.author}}</a></small>
+                                    </div><!-- end meta -->
+                                </div><!-- end shadow-desc -->
+                            </div><!-- end shadow -->
+                        </div><!-- end post-media -->
+                    </div><!-- end left-side -->
+                </ng-template>
+            </ng-container><!-- end masonry -->
+        </div>
+    </div>
+</section>
