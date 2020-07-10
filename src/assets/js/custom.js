@@ -6,9 +6,27 @@
 **************************************/
 
 (function ($) {
-    console.log("radi")
+    // console.log("radi")
+
+
+
     "use strict";
     $(document).ready(function () {
+
+
+        let categories = $(".category");
+        console.log(categories);
+        console.log("Test")
+
+        categories.click(function (e) {
+            e.preventDefault();
+            console.log(this);
+            console.log("Zdravo")
+        });
+
+
+
+
         $('#nav-expander').on('click', function (e) {
             e.preventDefault();
             $('body').toggleClass('nav-expanded');

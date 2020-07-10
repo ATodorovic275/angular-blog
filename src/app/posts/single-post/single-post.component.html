@@ -1,22 +1,22 @@
-<div class="blog-box row">
-    <div class="col-md-4">
-        <div class="post-media">
-            <a href="garden-single.html" title="">
-                <img src="assets/upload/garden_sq_01.jpg" alt="" class="img-fluid">
-                <div class="hovereffect"></div>
-            </a>
-        </div><!-- end media -->
-    </div><!-- end col -->
+<a [routerLink]="['/post',post.id]" routerLinkActive="router-link-active">
+    <div class="blog-box row">
+        <div class="col-md-4">
+            <div class="post-media">
+                <a href="garden-single.html" title="">
+                    <img src="assets/images/posts/{{post.image[0].src}}" alt="" class="img-fluid">
+                    <div class="hovereffect"></div>
+                </a>
+            </div><!-- end media -->
+        </div><!-- end col -->
 
-    <div class="blog-meta big-meta col-md-8">
-        <span class="bg-aqua"><a href="garden-category.html" title="">{{post.category.name}}</a></span>
-        <h4><a href="garden-single.html" title="">{{post.title}}</a></h4>
-        <p>{{post.description}}</p>
-        <small><a href="garden-category.html" title=""><i class="fa fa-eye"></i>
-                1887</a></small>
-        <small><a href="garden-single.html" title="">{{post.date | date : 'longDate'}}</a></small>
-        <small><a href="#" title="">by {{post.author.first_name}} {{post.author.last_name}}</a></small>
-    </div><!-- end meta -->
-</div><!-- end blog-box -->
+        <div class="blog-meta big-meta col-md-8">
+            <span class="bg-aqua"><a href="garden-category.html" title="">{{post.category.name}}</a></span>
+            <h4><a href="garden-single.html" title="">{{post.title}}</a></h4>
+            <p>{{post.description | shortStr}}</p>
 
+            <small><a href="garden-single.html" title="">{{post.date | date : 'longDate'}}</a></small>
+            <small><a href="#" title="">by {{post.author.first_name}} {{post.author.last_name}}</a></small>
+        </div><!-- end meta -->
+    </div><!-- end blog-box -->
+</a>
 <hr class="invis">

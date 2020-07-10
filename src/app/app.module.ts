@@ -1,3 +1,4 @@
+import { ShortStrPipe } from './short-str.pipe';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -16,6 +17,8 @@ import { PostsComponent } from './posts/posts.component';
 import { SinglePostComponent } from './posts/single-post/single-post.component';
 import { PostComponent } from './post/post.component';
 import { PostCategoryComponent } from './post-category/post-category.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -31,14 +34,16 @@ import { PostCategoryComponent } from './post-category/post-category.component';
     PostsComponent,
     SinglePostComponent,
     PostComponent,
-    PostCategoryComponent
+    PostCategoryComponent,
+    ShortStrPipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

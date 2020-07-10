@@ -1,28 +1,10 @@
 <section class="section wb">
+
     <div class="container">
         <div class="row">
             <div class="col-lg-10 offset-lg-1">
                 <div class="page-wrapper">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <h4>Who we are</h4>
-                            <p>Forest Time is a personal blog for handcrafted, cameramade photography content,
-                                fashion styles from independent creatives around the world.</p>
-                        </div>
-
-                        <div class="col-lg-4">
-                            <h4>How we help?</h4>
-                            <p>Etiam vulputate urna id libero auctor maximus. Nulla dignissim ligula diam, in
-                                sollicitudin ligula congue quis turpis dui urna nibhs. </p>
-                        </div>
-
-                        <div class="col-lg-4">
-                            <h4>Pre-Sale Question</h4>
-                            <p>Fusce dapibus nunc quis quam tempor vestibulum sit amet consequat enim.
-                                Pellentesque blandit hendrerit placerat. Integertis non.</p>
-                        </div>
-                    </div><!-- end row -->
-
+                    <h2>Contact us</h2>
                     <hr class="invis">
 
                     <div class="row">
@@ -30,10 +12,10 @@
                             <form class="form-wrapper" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
                                 <input type="text" class="form-control" placeholder="Your name" formControlName="name">
                                 <div *ngIf="name.invalid && (name.dirty || name.touched)">
-                                    <p *ngIf="name.errors.required">
+                                    <p *ngIf="name.errors.required" class="error">
                                         Name is required
                                     </p>
-                                    <p *ngIf="name.errors.minlength">
+                                    <p *ngIf="name.errors.minlength" class="error">
                                         Name must have a minimum of {{name.errors.minlength.requiredLength}}
                                         letters
                                     </p>
@@ -41,19 +23,19 @@
                                 <input type="text" class="form-control" placeholder="Email address"
                                     formControlName="email">
                                 <div *ngIf="email.invalid && (email.dirty || email.touched)">
-                                    <p *ngIf="email.errors.required">
+                                    <p *ngIf="email.errors.required" class="error">
                                         Email is required
                                     </p>
-                                    <p *ngIf="email.errors.email">
+                                    <p *ngIf="email.errors.email" class="error">
                                         Email address is in invalid format
                                     </p>
                                 </div>
                                 <input type="text" class="form-control" placeholder="Subject" formControlName="subject">
                                 <div *ngIf="subject.invalid && (subject.dirty || subject.touched)">
-                                    <p *ngIf="subject.errors.required">
+                                    <p *ngIf="subject.errors.required" class="error">
                                         Subject is required
                                     </p>
-                                    <p *ngIf="subject.errors.minlength">
+                                    <p *ngIf="subject.errors.minlength" class="error">
                                         Subject must have a minimum of {{subject.errors.minlength.requiredLength}}
                                         letters
                                     </p>
@@ -61,10 +43,10 @@
                                 <textarea class="form-control" placeholder="Your message"
                                     formControlName="message"></textarea>
                                 <div *ngIf="message.invalid && (message.dirty || message.touched)">
-                                    <p *ngIf="message.errors.required">
+                                    <p *ngIf="message.errors.required" class="error">
                                         Message is required
                                     </p>
-                                    <p *ngIf="message.errors.minlength">
+                                    <p *ngIf="message.errors.minlength" class="error">
                                         Message must have a minimum of {{message.errors.minlength.requiredLength}}
                                         letters
                                     </p>

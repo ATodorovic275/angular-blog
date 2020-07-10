@@ -1,5 +1,5 @@
 import { Category } from './../../category';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-one-category',
@@ -10,10 +10,18 @@ export class OneCategoryComponent implements OnInit {
 
   @Input() category: Category;
 
+  @Output() categoryIdEvent = new EventEmitter<Number>();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  emitCategoryId(id: Number) {
+    this.categoryIdEvent.emit(id);
+  }
+
+  onEvent(event) {
+    return false;
+  }
 }

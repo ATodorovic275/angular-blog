@@ -5,7 +5,7 @@ export interface Post {
     date: string,
     author: { id: number, first_name: string, last_name: string },
     category: { id: number, name: string },
-    // image: string
+    image: { id: Number, src: string, alt: string }
     // category_id: number,
     // author_id: number
 }

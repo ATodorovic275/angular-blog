@@ -7,7 +7,7 @@ $(document).ready(function () {
  **************************************/
 
     (function ($) {
-        console.log("radi")
+        // console.log("radi")
         "use strict";
         $(document).ready(function () {
             $('#nav-expander').on('click', function (e) {

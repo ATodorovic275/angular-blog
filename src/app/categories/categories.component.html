@@ -1,8 +1,9 @@
 <div class="widget">
-    <h2 class="widget-title">Popular Categories</h2>
+    <h2 class="widget-title">Categories</h2>
     <div class="link-widget">
         <ul>
-            <app-one-category *ngFor="let cat of categories" [category]="cat"></app-one-category>
+            <app-one-category *ngFor="let cat of categories" [category]="cat" (categoryIdEvent)="catchEvent($event)">
+            </app-one-category>
         </ul>
     </div><!-- end link-widget -->
 </div><!-- end widget -->

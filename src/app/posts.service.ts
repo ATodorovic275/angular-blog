@@ -40,6 +40,7 @@ export class PostsService {
 
 
   getOnePost(id: Number) {
+    this.http.get("http://127.0.0.1:8000/api/post/" + id).subscribe(data => console.log(data));
     return this.http.get("http://127.0.0.1:8000/api/post/" + id);
   }
 

@@ -1,1 +1,2 @@
-<li><a href="#">{{category.name}} <span></span></a></li>
+<li><a href="#" class='category' (click)="emitCategoryId(category.id)"
+                (click)="onEvent($event)">{{category.name}}<span></span></a></li>
