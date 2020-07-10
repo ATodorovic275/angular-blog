@@ -39,7 +39,7 @@ export class TopPostsComponent implements OnInit {
     // )
 
     this.postService.getRandomPosts().subscribe((data: Post[]) => this.posts = data);
-    console.log(this.posts)
+    // console.log(this.posts)
   }
 
 

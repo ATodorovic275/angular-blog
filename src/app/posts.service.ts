@@ -19,30 +19,28 @@ export class PostsService {
   getRandomPosts() {
 
     // console.log("Test") 
-    this.http.get(this.baseUrl).subscribe(response => console.log(response));
+    // this.http.get(this.baseUrl).subscribe(response => console.log(response));
 
     return this.http.get(this.baseUrl);
+  }
 
 
-    // map((data: any[]) => data.map((item: any) => {
-    //   // console.log("Item");
-    //   const array: Post[] = [];
-    //   array.push({
-    //     id: item.id,
-    //     title: item.title,
-    //     date: item.date,
-    //     description: item.description,
-    //     author: { id: item.author.id, first_name: item.author.first_name, last_name: item.author.last_name },
-    //     category: { id: item.category.id, name: item.category.name }
-    //   })
-    //   // return array;
-    //   // this.posts = array;
-    // }))
-
-
-    // return this.posts;
-    // console.log(this.posts)
+  getPosts() {
+    // this.http.get("http://127.0.0.1:8000/api/post").subscribe(response => console.log(response));
+    return this.http.get("http://127.0.0.1:8000/api/post");
 
 
   }
+
+
+  getPostsFromCategory(id: number) {
+    // this.http.get("http://127.0.0.1:8000/api/category-post/" + id).subscribe(data => console.log(data));
+    return this.http.get("http://127.0.0.1:8000/api/category-post/" + id);
+  }
+
+
+  getOnePost(id: Number) {
+    return this.http.get("http://127.0.0.1:8000/api/post/" + id);
+  }
+
 }

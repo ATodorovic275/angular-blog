@@ -9,6 +9,13 @@ import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 import { TopPostsComponent } from './top-posts/top-posts.component';
 import { HttpClientModule } from '@angular/common/http';
+import { OnePostComponent } from './top-posts/one-post/one-post.component';
+import { CategoriesComponent } from './categories/categories.component';
+import { OneCategoryComponent } from './categories/one-category/one-category.component';
+import { PostsComponent } from './posts/posts.component';
+import { SinglePostComponent } from './posts/single-post/single-post.component';
+import { PostComponent } from './post/post.component';
+import { PostCategoryComponent } from './post-category/post-category.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +24,14 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     NavComponent,
     HomeComponent,
-    TopPostsComponent
+    TopPostsComponent,
+    OnePostComponent,
+    CategoriesComponent,
+    OneCategoryComponent,
+    PostsComponent,
+    SinglePostComponent,
+    PostComponent,
+    PostCategoryComponent
   ],
   imports: [
     BrowserModule,

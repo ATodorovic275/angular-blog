@@ -1,0 +1,69 @@
+<a [routerLink]="['/post',post.id]" routerLinkActive="router-link-active">
+    <div *ngIf="post.id == 1;else two" class="left-side">
+        <div class="masonry-box post-media">
+            <img src="assets/upload/garden_cat_01.jpg" alt="" class="img-fluid">
+            <div class="shadoweffect">
+                <div class="shadow-desc">
+                    <div class="blog-meta">
+                        <span class="bg-aqua"><a href="assets/blog-category-01.html"
+                                title="">{{post.category.name}}</a></span>
+                        <h4><a href="assets/garden-single.html" title="">{{post.title}}</a></h4>
+                        <small><a href="assets/garden-single.html"
+                                title="">{{post.date | date : 'longDate'}}</a></small>
+                        <small><a href="#" title="">by
+                                {{post.author.first_name}} {{post.author.last_name}}</a></small>
+                    </div><!-- end meta -->
+                </div><!-- end shadow-desc -->
+            </div><!-- end shadow -->
+        </div><!-- end post-media -->
+    </div><!-- end left-side -->
+</a>
+
+<a href="">
+    <ng-template #two>
+        <div *ngIf="post.id==2;else tree" class="center-side">
+            <div class="masonry-box post-media">
+                <img src="assets/upload/garden_cat_01.jpg" alt="" class="img-fluid">
+                <div class="shadoweffect">
+                    <div class="shadow-desc">
+                        <div class="blog-meta">
+                            <span class="bg-aqua"><a href="assets/blog-category-01.html"
+                                    title="">{{post.category.name}}</a></span>
+                            <h4><a href="assets/garden-single.html" title="">{{post.title}}</a></h4>
+                            <small><a href="assets/garden-single.html"
+                                    title="">{{post.date | date : 'longDate'}}</a></small>
+                            <small><a href="#" title="">by
+                                    {{post.author.first_name}} {{post.author.last_name}}</a></small>
+                        </div><!-- end meta -->
+                    </div><!-- end shadow-desc -->
+                </div><!-- end shadow -->
+            </div><!-- end post-media -->
+        </div><!-- end left-side -->
+
+    </ng-template>
+</a>
+
+
+<a href="">
+
+    <ng-template #tree>
+        <div class="right-side hidden-md-down">
+            <div class="masonry-box post-media">
+                <img src="assets/upload/garden_cat_01.jpg" alt="" class="img-fluid">
+                <div class="shadoweffect">
+                    <div class="shadow-desc">
+                        <div class="blog-meta">
+                            <span class="bg-aqua"><a href="assets/blog-category-01.html"
+                                    title="">{{post.category.name}}</a></span>
+                            <h4><a href="assets/garden-single.html" title="">{{post.title}}</a></h4>
+                            <small><a href="assets/garden-single.html"
+                                    title="">{{post.date | date : 'longDate'}}</a></small>
+                            <small><a href="#" title="">by
+                                    {{post.author.first_name}} {{post.author.last_name}}</a></small>
+                        </div><!-- end meta -->
+                    </div><!-- end shadow-desc -->
+                </div><!-- end shadow -->
+            </div><!-- end post-media -->
+        </div><!-- end left-side -->
+    </ng-template>
+</a>

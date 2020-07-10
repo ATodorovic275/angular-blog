@@ -12,10 +12,8 @@ export class CategoriesService {
 
 
   getCategories() {
-    this.http.get(this.url).subscribe(response => console.log(response));
+    // this.http.get(this.url).subscribe(response => console.log(response));
 
     return this.http.get(this.url);
-
-
   }
 }
