@@ -18,6 +18,7 @@ import { SinglePostComponent } from './posts/single-post/single-post.component';
 import { PostComponent } from './post/post.component';
 import { PostCategoryComponent } from './post-category/post-category.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SinglePostComponent,
     PostComponent,
     PostCategoryComponent,
-    ShortStrPipe
+    ShortStrPipe,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
