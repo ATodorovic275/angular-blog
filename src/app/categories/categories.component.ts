@@ -1,7 +1,6 @@
 import { CategoriesService } from './../categories.service';
 import { Category } from './../category';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { trigger, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-categories',
@@ -15,7 +14,6 @@ export class CategoriesComponent implements OnInit {
   @Output() categoryId = new EventEmitter();
 
   constructor(private categoryService: CategoriesService) {
-    // categoryService.getCategories().subscribe(response => console.log(response));
     categoryService.getCategories().subscribe((response: Category[]) => this.categories = response);
   }
 
@@ -24,11 +22,7 @@ export class CategoriesComponent implements OnInit {
   }
 
   catchEvent(event) {
-    console.log(event);
     this.categoryId.emit(event)
   }
-
-
-
 
 }

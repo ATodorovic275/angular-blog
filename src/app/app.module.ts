@@ -37,7 +37,7 @@ import { HeaderComponent } from './header/header.component';
     PostComponent,
     PostCategoryComponent,
     ShortStrPipe,
-    HeaderComponent
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

@@ -12,21 +12,11 @@ export class HomeComponent implements OnInit {
   posts: Post[];
 
   constructor(private postService: PostsService) {
-    // postService.getRandomPosts().subscribe((data: p[]) => {
-    //   console.log(data);
-    //   // this.categories = data;
-    // }
-
-    // )
-
     this.postService.getRandomPosts().subscribe((data: Post[]) => this.posts = data);
-    // console.log(this.posts)
   }
 
   ngOnInit(): void {
   }
 
-  // getPosts() {
-  //   console.log(this.posts)
-  // }
+
 } 

@@ -15,17 +15,13 @@ export class PostCategoryComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private postService: PostsService) {
     this.postService.getPostsFromCategory(this.id);
-    // console.log("Id:" + this.id)
   }
 
   ngOnInit(): void {
-    // console.log(this.route.snapshot.params['id'])
     this.route.params.subscribe((params: Params) => {
-      // console.log(params['id']);
       this.id = params['id'];
       this.postService.getPostsFromCategory(this.id)
         .subscribe((data: Post[]) => this.postsFromCategory = data);
-
     })
   }
 
