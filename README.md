@@ -1,5 +1,22 @@
 # AngularBlog
 
+My first angular project, simple blog about computers, phones and games  
+This is only frontend, for backend was used [laravel api](https://github.com/ATodorovic275/blog-api)
+
+
+# Used tehnologies
+ - Laravel
+    - components and databinding
+    - http
+    - forms validation
+    - pipes
+    - routes
+    - services
+- TypeScript
+
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
 
 ## Development server
