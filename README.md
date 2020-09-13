@@ -12,11 +12,10 @@ This is only frontend, for backend was used [laravel api](https://github.com/ATo
     - pipes
     - routes
     - services
-- TypeScript
+- TypeScript  
 
-
-
-
+           
+  
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
 
 ## Development server
