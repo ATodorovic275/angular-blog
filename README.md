@@ -4,7 +4,7 @@ My first angular project, simple blog about computers, phones and games
 This is only frontend, for backend was used [laravel api](https://github.com/ATodorovic275/blog-api)
 
 
-# Used tehnologies
+# Used technologies
 - Angular
     - components and databinding
     - http
