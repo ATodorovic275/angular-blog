@@ -5,7 +5,7 @@ This is only frontend, for backend was used [laravel api](https://github.com/ATo
 
 
 # Used tehnologies
- - Laravel
+- Angular
     - components and databinding
     - http
     - forms validation
